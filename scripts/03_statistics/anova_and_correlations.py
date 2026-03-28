@@ -2,7 +2,7 @@ import pandas as pd
 import scipy.stats as stats
 import pingouin as pg
 
-df = pd.read_csv("data/donnees_global_primaire.csv", sep=";")
+df = pd.read_csv("data_study.csv", sep=";")
 
 numeric_cols = df.columns[6:]
 for col in numeric_cols:
@@ -11,13 +11,13 @@ df[col] = pd.to_numeric(df[col], errors='coerce')
 # Theta ANOVA
 
 df_theta = df.melt(
-id_vars='ID_participant',
-value_vars=['Log_Theta_papier','Log_Theta_Standard','Log_Theta_Adaptatif'],
+id_vars='subject_id',
+value_vars=['Log_theta_paper','Log_theta_standard','Log_theta_adaptive'],
 var_name='Condition',
 value_name='Theta'
 )
 
-anova_theta = pg.rm_anova(data=df_theta, dv='Theta', within='Condition', subject='ID_participant')
+anova_theta = pg.rm_anova(data=df_theta, dv='Theta', within='Condition', subject='subject_id')
 print(anova_theta)
 
 # SES correlation
