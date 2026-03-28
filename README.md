@@ -1,8 +1,7 @@
 1. Description
+ 
 This repository contains the analysis pipeline for the study:
-
 "Neural efficiency of visuospatial working memory across learning modalities in primary school children"
-
 The project investigates EEG markers of cognitive load (theta) and attentional engagement (alpha) across three learning conditions:
 
 No-screen (paper)
