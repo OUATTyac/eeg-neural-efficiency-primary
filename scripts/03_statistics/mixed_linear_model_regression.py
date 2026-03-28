@@ -1,12 +1,12 @@
 #Étape 1 : charger + transformer
 import pandas as pd
 
-df = pd.read_csv(r"C:\Users\ouatt\Downloads\donnees_global_primaire.csv", sep=';')
+df = pd.read_csv(data_study.csv", sep=';')
 
 # passer en format long
 df_long = pd.melt(df,
-                  id_vars=['ID_participant', 'ordre_conditions'],
-                  value_vars=['Theta_papier', 'Theta_Standard', 'Theta_Adaptatif'],
+                  id_vars=['subject_id', 'conditions_order'],
+                  value_vars=['theta_paper', 'theta_standard', 'theta_adaptive'],
                   var_name='condition',
                   value_name='theta')
 
@@ -16,9 +16,9 @@ df_long['condition'] = df_long['condition'].str.replace('Theta_', '')
 #Étape 2 : modèle mixte
 import statsmodels.formula.api as smf
 
-model = smf.mixedlm("theta ~ condition * ordre_conditions",
+model = smf.mixedlm("theta ~ condition * conditions_order",
                     df_long,
-                    groups=df_long["ID_participant"])
+                    groups=df_long["subject_id"])
 
 result = model.fit()
 print(result.summary())
