@@ -1,6 +1,9 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# Load data
+df = pd.read_csv("data_study.csv", sep=";")
+
 plt.figure(figsize=(8, 6))
 sns.set(style="whitegrid")
 
