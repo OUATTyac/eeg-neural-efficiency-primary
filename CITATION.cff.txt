@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated article."
+authors:
+
+* family-names: "OUATTARA"
+  given-names: "Yacouba"
+  title: "Neural efficiency of visuospatial working memory across learning modalities in primary school children: EEG evidence and the role of socioeconomic status"
+  version: 1.0.0
+  date-released: 2026-03-26
+  doi: ""
+  repository-code: "https://github.com/OUATTyac/eeg-neural-efficiency-primary"
+  license: "MIT"
+  abstract: >
+  This repository contains EEG preprocessing, statistical analyses,
+  and visualization scripts for investigating neural efficiency in
+  visuospatial working memory across learning modalities in primary school children.
+  keywords:
+* EEG
+* working memory
+* neural efficiency
+* education
+* cognitive neuroscience

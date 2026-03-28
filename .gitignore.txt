@@ -1,0 +1,7 @@
+data/raw/
+*.xdf
+*.edf
+*.bdf
+.env
+__pycache__/
+.ipynb_checkpoints/

@@ -1,0 +1,8 @@
+mne
+pyxdf
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+pingouin
