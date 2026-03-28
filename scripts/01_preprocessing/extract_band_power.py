@@ -7,7 +7,7 @@ from mne.time_frequency import psd_array_welch
 
 # Configuration
 
-data_path = r"C:\Users\ouatt\Projet_EEG2\data_primaire"
+data_path = r"Projet_EEG2\data_primaire"
 
 FREQUENCY_BANDS = {
 'theta': (4, 8),
